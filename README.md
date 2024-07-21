@@ -1,1 +1,1 @@
-# s-interpreter
+# snof-interpreter
