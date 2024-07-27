@@ -140,7 +140,7 @@ void get_id(Lexer* lexer)
 	s[0] = lexer->content[lexer->cur - 1];
 	s[1] = '\0';
 
-	while(isalnum(peek(lexer)) || peek(lexer) == '_') {
+	while(!is_at_end(lexer) && peek(lexer) != ' ' && peek(lexer) != '\n' && peek(lexer) != ':') {
 		len++;
 		s = realloc(s, (len + 1) * sizeof(char));
 		s[len - 1] = advance(lexer);
